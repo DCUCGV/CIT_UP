@@ -1,0 +1,133 @@
+* {
+    font-family: 'Jua', sans-serif;
+	}
+
+#text {
+    text-align : left;
+    margin: 20px;
+    color :  #009127;
+    font-size :40px;
+}
+
+div {
+    font-size: 10px;
+    text-align: center;
+}
+p{
+        text-align:center;
+        font-size:25px;
+        margin:auto;
+ }
+
+#main {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 4fr;
+    font-size : 20px;
+}
+
+#main #contents {
+    min-height: 500px;
+
+    margin-right: 10px;
+    margin-left : 10px;
+    font-size : 20px;
+    text-align: center;
+}
+
+#main #sidebar {
+    min-height: 500px;
+    border: solid #009127;
+    margin-left : 10px;
+}
+
+#footer {
+    margin-top: 10px;
+    background-color: #009127;
+    margin : 10px;
+}
+
+table{
+    width : 800px;
+    margin : auto;
+    margin-top: 20px;
+}
+th{
+    background-color: #009127;
+    border: 1px solid black;
+    text-align: left;
+    color: white;
+    font-size : 15px;
+
+}
+td{
+    background-color: white;
+    border: 1px solid #464646;
+    text-align: center;
+    font-size :15px;
+}
+tr{
+    text-align: left;
+}
+thead{
+    text-align: center;
+}
+input[type=button]{
+    font-size:12px;
+    margin-left: 700px;
+}
+
+@media (max-width:600px){ /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+    #text{
+        text-align: center;
+    }
+
+    p{
+        text-align:center;
+        margin:auto;
+        font-size : 18px;
+    }
+    #main {
+        display: block;
+    }
+
+    #main #contents {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        font-size : 20px;
+    }
+    #main #footer{
+        margin: auto;
+    }
+    table{
+        width : 400px;
+        margin : auto;
+    }
+    th{
+        background-color: #009127;
+        border: 1px solid black;
+        text-align: center;
+        color: white;
+        font-size :10px;
+
+    }
+    td{
+        background-color: white;
+        border: 1px solid #464646;
+        text-align: center;
+        font-size :10px;
+    }
+    #main #sidebar {
+        background-color: #009127;
+        margin-bottom: 10px;
+        min-height: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    input[type=button]{
+        font-size:10px;
+        margin-left: 315px;
+    }
+
+
+}
