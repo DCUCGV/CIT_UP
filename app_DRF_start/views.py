@@ -5,6 +5,7 @@ from rest_framework import viewsets
 from app_DRF_start.models import Info
 from app_DRF_start.serializers import InfoSerializer
 
+
 # Create your views here.
 def sensor_view(request):
     page = request.GET.get('page', '1')
@@ -18,3 +19,6 @@ def sensor_view(request):
 class InfoViewSet(viewsets.ModelViewSet):
     queryset = Info.objects.all()
     serializer_class = InfoSerializer
+
+
+

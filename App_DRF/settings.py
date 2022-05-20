@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import firebase_admin
+from firebase_admin import credentials
 
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -56,7 +60,7 @@ ROOT_URLCONF = 'App_DRF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
