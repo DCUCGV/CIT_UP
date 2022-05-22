@@ -114,7 +114,6 @@ from django.db import models
 #         managed = False
 #         db_table = 'django_session'
 
-
 class Info(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=30)
@@ -124,3 +123,4 @@ class Info(models.Model):
     class Meta:
         managed = False
         db_table = 'info'
+        app_label = 'app_DRF_start'

@@ -14,6 +14,8 @@ from pathlib import Path
 import firebase_admin
 from firebase_admin import credentials
 
+
+
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,7 +44,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'app_DRF_start',
+    'app_DRF_start.apps.AppDrfStartConfig',
+    # 'app_DRF_start',
+    'django_crontab',
+    'django_celery_beat',
+    'django_celery_results',
 ]
 
 MIDDLEWARE = [
@@ -109,7 +115,27 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# CRONJOBS = [
+#
+#     ('*/1 * * * *','app_DRF_start.push_fcm.send_to_firebase_cloud_messaging','>> /home/pi/CIT_UP_DRF/schedule.log'+' 2?&1 ')
+# ]
+#
+# CRONTAB_DJANGO_SETTINGS_MODULE = 'app_DRF_start.settings.local_settings'
 
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Seoul'
+CELERY_ENABLE_UTC = False
+
+CELERY_BEAT_SCHEDULE ={
+    'send_to_firebase_cloud_messaging':{
+        'task':'app_DRF_start.push_fcm.send_to_firebase_cloud_messaging',
+        'schedule':30,
+    }
+}
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 

@@ -2,11 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator
 from rest_framework import viewsets
-from app_DRF_start.models import Info
 from app_DRF_start.serializers import InfoSerializer
+from app_DRF_start.models import Info
 
-
-# Create your views here.
 def sensor_view(request):
     page = request.GET.get('page', '1')
     infos = Info.objects.all()
