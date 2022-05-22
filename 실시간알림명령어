@@ -1,0 +1,6 @@
+실시간 알림 받기 위해서 수행해야되는 명령
+1. 
+celery -A App_DRF worker -l INFO
+
+2. 
+celery -A App_DRF beat -l INFO
