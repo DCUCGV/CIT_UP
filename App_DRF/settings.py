@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'app_DRF_start.apps.AppDrfStartConfig',
-    # 'app_DRF_start',
     'django_crontab',
     'django_celery_beat',
     'django_celery_results',
@@ -129,15 +128,16 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Seoul'
 CELERY_ENABLE_UTC = False
-
+#
 CELERY_BEAT_SCHEDULE ={
     'send_to_firebase_cloud_messaging':{
         'task':'app_DRF_start.push_fcm.send_to_firebase_cloud_messaging',
-        'schedule':30,
+        # 'task':'app_DRF_start.test_push.send_notification',
+        'schedule':60,
     }
 }
-# Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
+
+
 
 LANGUAGE_CODE = 'en-us'
 
@@ -151,7 +151,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR/'static'
+STATICFILES_DIRS=[
+    BASE_DIR/'app_DRF_start'/'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

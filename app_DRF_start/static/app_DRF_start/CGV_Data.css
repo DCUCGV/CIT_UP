@@ -1,0 +1,64 @@
+*{margin: 0; padding: 0;}
+
+body{
+    padding: 30px;
+    background-color: #EAF2E8;
+}
+
+/* header 영역  */
+header{ padding: 5px;}
+
+header a{text-decoration: none; color: #333333;}
+
+ul{ list-style: none; 
+text-align: right;}
+
+/* nav 영역 */
+nav{margin-top: 10px; margin-bottom: 20px;}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline;
+    letter-spacing: .3em;
+    word-spacing: 50px;
+    margin-left: 2em;
+} 
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 5em;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+nav ul li a:hover{ text-decoration: underline;}
+
+.user-wrap {
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+}
+.user-wrap img{
+    width: 100%;
+    vertical-aligh: middle;
+}
+.user-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    transform: translate( -50%, -50% );
+    font-size: 35px;
+    font-family: 'ypseo';
+    text-align: center;
+}
+
+
+aside#right #login input{
+    margin-bottom: 5px;
+}

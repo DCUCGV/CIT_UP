@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CGV</title>
+ 
+    <!-- 외부 스타일시트 적용 -->
+    {% load static %}
+     <link rel ="stylesheet" type = "text/css" href="{% static 'app_DRF_start/CGV.css' %}">
+</head>
+<body>
+    <header>
+    	<img src="{% static 'img/logo.png'  %}" width="300" height="120">
+        <div id="login" style="float:right; font-size: 25px;">
+            <ul>
+                <li><a href="{% url 'app_DRF_start:login' %}"><br>LOGIN </a></li>
+                <li><a href="{% url 'app_DRF_start:mypage' %}">My Page</a></li>
+            </ul> 
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'app_DRF_start:main' %}">Home</a></li>
+            <li><a href="{% url 'app_DRF_start:about' %}">About</a></li>
+            <li><a href="{% url 'app_DRF_start:data'  %}">Data</a></li>
+            <li><a href="https://www.data.go.kr/dataset/15015129/fileData.do">Portal</a></li>
+        </ul>
+        <hr>
+    </nav>
+    
+    <aside id="top"> 
+        <div class="user-wrap">       
+            <div class="user-image">
+                <center>
+                <img src="{% static 'img/main.jpg' %}" srcset="{% static 'img/main.jpg' %} 300w,{% static 'img/main.jpg' %} 450w, {% static 'img/main.jpg' %} 600w" sizes="(min-width: 600px) 600px, (min-width: 450px) 450px, 300px" alt="responsive images">
+                </center>
+            </div>
+            <div class="user-text">
+                <p><br>Automatic Open & Compression<br>With<br>Saturation Sensor<br>Environment Data System<br></p>
+            </div>
+        </div>
+
+    </aside>
+    <section id="main">
+    </section>    
+</body>
+</html>

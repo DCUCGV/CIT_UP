@@ -23,6 +23,6 @@ router.register(r'test',views.InfoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sensor/',include('app_DRF_start.urls')),
+    path('citup/',include('app_DRF_start.urls')),
     path('',include(router.urls)),
 ]

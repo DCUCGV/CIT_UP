@@ -1,0 +1,126 @@
+*{margin: 0; padding: 0;}
+
+body{
+    padding: 20px;
+    background-color: #EAF2E8;
+}
+
+/* header 영역  */
+header{ padding: 5px;}
+
+header a{text-decoration: none; color: #333333;}
+
+ul{ list-style: none; 
+text-align: right;}
+
+/* nav 영역 */
+nav{margin-top: 10px; margin-bottom: 20px;}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline;
+    letter-spacing: .3em;
+    word-spacing: 50px;
+    margin-left: 2em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 5em;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+nav ul li a:hover{ text-decoration: underline;}
+
+.user-wrap {
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+}
+.user-wrap img{
+    width: 100%;
+    vertical-aligh: middle;
+}
+.user-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    transform: translate( -50%, -50% );
+    font-size: 35px;
+    font-family: 'ypseo';
+    text-align: center;
+}
+
+
+aside#right #login input{
+    margin-bottom: 5px;
+}
+
+table{
+    width : 800px;
+    margin : auto;
+    margin-top: 20px;
+}
+th{
+    background-color: #009127;
+    border: 1px solid black;
+    text-align: left;
+    color: white;
+    font-size : 15px;
+
+}
+td{
+    background-color: white;
+    border: 1px solid #464646;
+    text-align: center;
+    font-size :15px;
+}
+tr{
+    text-align: center;
+}
+thead{
+    text-align: center;
+}
+input[type=button]{
+    font-size:12px;
+    margin-left: 700px;
+}
+
+/*div {*/
+/*    font-size: 10px;*/
+/*    text-align: center;*/
+/*}*/
+/*p{*/
+/*        text-align:center;*/
+/*        font-size:25px;*/
+/*        margin:auto;*/
+/* }*/
+
+#main {
+    display: grid;
+    text-align: center;
+    /*grid-template-columns: 1fr 4fr;*/
+    font-size : 20px;
+}
+
+#main #contents {
+    min-height: 500px;
+
+    /*margin-right: 10px;*/
+    /*margin-left : 10px;*/
+    font-size : 20px;
+    text-align: center;
+}
+
+#main #sidebar {
+    min-height: 500px;
+    border: solid #009127;
+    /*margin-left : 10px;*/
+}

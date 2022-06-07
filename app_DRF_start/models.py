@@ -115,7 +115,7 @@ from django.db import models
 #         db_table = 'django_session'
 
 class Info(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField(db_column='id', primary_key=True)
     name = models.CharField(max_length=30)
     volume = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
     date = models.DateTimeField()

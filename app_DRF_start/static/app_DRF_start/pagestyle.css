@@ -1,6 +1,6 @@
-* {
-    font-family: 'Jua', sans-serif;
-	}
+/** {*/
+/*    font-family: 'Jua', sans-serif;*/
+/*	}*/
 
 #text {
     text-align : left;
@@ -22,15 +22,15 @@ p{
 #main {
     display: grid;
     text-align: center;
-    grid-template-columns: 1fr 4fr;
+    /*grid-template-columns: 1fr 4fr;*/
     font-size : 20px;
 }
 
 #main #contents {
     min-height: 500px;
 
-    margin-right: 10px;
-    margin-left : 10px;
+    /*margin-right: 10px;*/
+    /*margin-left : 10px;*/
     font-size : 20px;
     text-align: center;
 }
@@ -38,14 +38,14 @@ p{
 #main #sidebar {
     min-height: 500px;
     border: solid #009127;
-    margin-left : 10px;
+    /*margin-left : 10px;*/
 }
 
-#footer {
-    margin-top: 10px;
-    background-color: #009127;
-    margin : 10px;
-}
+/*#footer {*/
+/*    margin-top: 10px;*/
+/*    background-color: #009127;*/
+/*    margin : 10px;*/
+/*}*/
 
 table{
     width : 800px;
@@ -67,7 +67,7 @@ td{
     font-size :15px;
 }
 tr{
-    text-align: left;
+    text-align: center;
 }
 thead{
     text-align: center;

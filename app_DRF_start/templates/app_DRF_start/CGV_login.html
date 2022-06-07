@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN</title>
+        <meta charset="utf-8">
+        {%  load static %}
+        <link rel ="stylesheet" type = "text/css" href="{% static 'app_DRF_start/CGV_login.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+        <style>
+            h1{text-align: center;}
+        </style>
+    </head>
+
+    <body>
+        <br><h1>LOGIN</h1>
+        <div class="login-form">
+            <form>            
+                <input id="LOGIN_ID" class="text-field" type="text" name="id"  placeholder="아이디 혹은 사용자 이름">
+                <input id="LOGIN_PW" class="text-field" type="text" name="password"  placeholder="비밀번호">
+                <button id="LOGIN_BTN" class="login-btn" type="button" disabled>로그인</button>
+            </form>
+
+            <div class="login_bottom">
+                <a href="#">비밀번호를 잊어버리셨나요?</a>
+            </div>
+        </div>
+        <script src="{% static 'app_DRF_start/CGV_login.js' %}" defer=""></script>
+    </body>
+</html>

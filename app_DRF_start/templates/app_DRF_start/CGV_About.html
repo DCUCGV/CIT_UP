@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CGV</title>
+ 
+    <!-- 외부 스타일시트 적용 -->
+    {% load static %}
+    <link rel ="stylesheet" type = "text/css" href="{% static 'app_DRF_start/CGV.css' %}">
+
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/logo.png' %}" width="300" height="110">
+        <div id="login" style="float:right; font-size: 25px;">
+            <ul>
+                <li><a href="{% url 'app_DRF_start:login' %}"><br>LOGIN </a></li>
+                <li><a href="{% url 'app_DRF_start:mypage' %}">My Page</a></li>
+            </ul> 
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'app_DRF_start:main' %}">Home</a></li>
+            <li><a href="{% url 'app_DRF_start:about' %}">About</a></li>
+            <li><a href="{% url 'app_DRF_start:data'  %}">Data</a></li>
+            <li><a href="https://www.data.go.kr/dataset/15015129/fileData.do">Portal</a></li>
+          </ul>
+        <hr>
+    </nav>
+    
+    <aside id="top"> 
+        <div class="user-wrap">       
+            <div>
+        <img src="{% static 'img/about.png' %}" style="width: 700px; height: auto; float: left; margin-right: 50px;">
+        <p style="font-size: 40px; font-weight : bold; font-family: arial;"><br>CGV</p>
+        <p style="font-size: 20px;">"Clean Ground View"<br>원활하고 편리한 쓰레기통 관리를 통해 깨끗한 환경을 만들자는 의미를 담고 있으며, CIT_UP 프로젝트를 통해 쓰레기 관리의 중요성을 인지하고 환경에 대한 관심을 높여 다양한 연구에 도움이 되고자 하는 의미를 담았다.</p>
+
+        <p style="font-size: 40px; font-weight: bold; font-family: arial;"><br>CIT_UP</p>
+        <p style="font-size: 20px;">"Clean IT UP"<br> CIT_UP 프로젝트는 환경오염의 원인 중 한 가지인 쓰레기는 버리는 것 뿐만 아니라 관리 또한 중요하다는 점을 본 프로젝트를 통해 인식하기 위해 청소 관리자를 위한 시스템을 개발하려는 목적을 가지고 있다. 또한 청소 관리자를 위한 원활하고 편리한 쓰레기통 관리 시스템 제공과 발생된 쓰레기 별 빈도 데이터를 수집하여 다양한 연구에 사용하기 위한 프로젝트를 진행한다.<br>The CIT_UP project aims to develop a system for cleaning managers in order to recognize through this project that waste, one of the causes of environmental pollution, is important not only for processing but also for management. In addition, a project is carried out to provide a smooth and convenient trash can management system for cleaning managers and to collect data on frequency of generated garbage and use it for various studies.</p>
+
+    </div>
+        </div>
+    </aside>
+    <section id="main">
+    </section>    
+</body>
+</html>
