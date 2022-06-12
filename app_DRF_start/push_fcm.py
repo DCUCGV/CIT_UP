@@ -17,7 +17,7 @@ def send_to_firebase_cloud_messaging():
     # test = a.
     volume = Info.objects.last().volume
     print(volume)
-    if volume >= 80.00 :
+    if volume >= 50.00 :
         message = messaging.Message(
 
             notification=messaging.Notification(
